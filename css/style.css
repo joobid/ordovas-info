@@ -224,3 +224,34 @@ sup a { text-decoration: none; font-weight: 700; }
   .cabecera, #progreso, #visor { display: none; }
   body { background: #fff; }
 }
+
+/* ÁRBOL APAISADO (estilo lámina) */
+.tablero-marco { max-width: 1200px; margin: 0 auto; position: relative; background: #fff; box-shadow: 0 24px 50px -24px rgba(43,33,24,.5); border: 1px solid var(--linea); overflow: hidden; }
+.tablero { position: absolute; top: 0; left: 0; width: 1200px; height: 850px; transform-origin: top left; background: #fff; }
+.tablero .conectores { position: absolute; inset: 0; width: 1200px; height: 850px; }
+.tablero-titulo { position: absolute; top: 18px; left: 0; width: 1200px; text-align: center; }
+.guion { font-family: "Pinyon Script", "Cormorant Garamond", cursive; font-size: 3rem; line-height: 1.1; color: var(--tinta); display: block; }
+.tablero-titulo small, .boda small { display: block; font-size: .72rem; letter-spacing: .28em; text-transform: uppercase; color: var(--oro); }
+.arbolito { position: absolute; left: 520px; top: 96px; width: 160px; height: 180px; }
+.fig { position: absolute; width: var(--fw, 130px); left: calc(var(--x) * 1px - var(--fw, 130px) / 2); top: calc(var(--y) * 1px - var(--h) / 2); text-align: center; text-decoration: none; color: var(--tinta); line-height: 1.2; }
+.ovalo { display: block; width: var(--w); height: var(--h); margin: 0 auto; border-radius: 50%; overflow: hidden; background: #e8ede9; box-shadow: 0 0 0 3px #fff, 0 0 0 5px #7f9487; transition: box-shadow .25s, transform .25s; }
+.ovalo img { width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.05); }
+.ovalo.sin-foto { display: flex; align-items: center; justify-content: center; }
+.ovalo.sin-foto::before { content: attr(data-ini); font-family: var(--serif); font-size: 1.7rem; font-weight: 600; color: #7f9487; }
+a.fig:hover .ovalo { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--granate); transform: scale(1.04); }
+a.fig:hover { color: var(--granate); }
+.rotulo { display: block; margin-top: 12px; }
+.rotulo b { display: block; font-family: var(--serif); font-size: 1.02rem; font-weight: 600; line-height: 1.15; }
+.rotulo small { display: block; font-family: var(--serif); font-style: italic; font-size: .85rem; color: var(--tinta-suave); margin-top: 2px; }
+.fig.centro .rotulo b { font-size: 1.12rem; }
+.fig.autor .ovalo { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--granate); }
+.boda { position: absolute; left: 0; width: 1200px; top: 538px; text-align: center; }
+.boda .guion { font-size: 1.7rem; }
+.boda small { letter-spacing: .12em; }
+.arbol-movil { display: none; }
+.nivel.n5 { grid-template-columns: repeat(5, 1fr); }
+@media (max-width: 760px) {
+  .tablero-marco { display: none; }
+  .arbol-movil { display: block; }
+  .nivel.n5 { grid-template-columns: 1fr; }
+}

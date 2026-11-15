@@ -55,3 +55,25 @@
   visor.addEventListener("click", cerrar);
   document.addEventListener("keydown", function (e) { if (e.key === "Escape") cerrar(); });
 })();
+
+(function () {
+  var marco = document.querySelector(".tablero-marco");
+  if (!marco) return;
+  var tablero = marco.querySelector(".tablero");
+  function ajustar() {
+    var s = Math.min(1, marco.clientWidth / 1200);
+    tablero.style.transform = "scale(" + s + ")";
+    marco.style.height = 850 * s + "px";
+  }
+  window.addEventListener("resize", ajustar);
+  ajustar();
+  marco.querySelectorAll(".ovalo img").forEach(function (img) {
+    function sinFoto() {
+      var o = img.parentNode;
+      o.classList.add("sin-foto");
+      img.remove();
+    }
+    if (img.complete && img.naturalWidth === 0) sinFoto();
+    else img.addEventListener("error", sinFoto);
+  });
+})();
