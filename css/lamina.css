@@ -5,6 +5,7 @@ html, body { margin: 0; background: #fff; }
 .titulo { position: absolute; top: 46px; left: 0; width: 1600px; text-align: center; }
 .guion { display: block; font-family: "Pinyon Script", "Cormorant Garamond", cursive; font-size: 84px; line-height: 1.05; }
 .titulo small, .boda small { display: block; font-size: 16px; letter-spacing: .34em; text-transform: uppercase; color: #a8864a; font-weight: 700; }
+.titulo small { margin-top: 34px; }
 .arbolito { position: absolute; left: 655px; top: 150px; width: 290px; height: 330px; }
 .conectores { position: absolute; left: 0; top: 0; width: 1600px; height: 1200px; }
 .fig { position: absolute; text-align: center; text-decoration: none; color: inherit; }
