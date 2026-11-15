@@ -83,7 +83,7 @@
   var marco = document.querySelector(".tablero-marco");
   if (!fig || !marco) return;
   var img = fig.querySelector("img");
-  function mostrar() { fig.hidden = false; marco.style.display = "none"; }
+  function mostrar() { fig.hidden = false; marco.style.display = "none"; fig.closest("section").classList.add("con-lamina"); }
   var test = new Image();
   test.onload = mostrar;
   test.src = img.getAttribute("src");

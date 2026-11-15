@@ -270,4 +270,11 @@ a.fig:hover { color: var(--granate); }
 .lamina-web[hidden] { display: none; }
 .lamina-web img { width: 100%; height: auto; background: #fff; border: 1px solid var(--linea); box-shadow: 0 24px 50px -24px rgba(43,33,24,.5); }
 .lamina-web figcaption { text-align: center; font-family: var(--serif); font-style: italic; color: var(--tinta-suave); margin-top: .8rem; }
-@media (max-width: 760px) { .lamina-web { display: none !important; } }
+.lamina-web .solo-movil { display: none; }
+.con-lamina .arbol-movil { display: none !important; }
+@media (max-width: 760px) {
+  .lamina-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; margin-inline: -1rem; padding-bottom: .4rem; }
+  .lamina-web img { width: 880px; max-width: none; }
+  .lamina-web .solo-ordenador { display: none; }
+  .lamina-web .solo-movil { display: inline; }
+}
