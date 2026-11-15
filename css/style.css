@@ -245,7 +245,7 @@ a.fig:hover { color: var(--granate); }
 .rotulo small { display: block; font-family: var(--serif); font-style: italic; font-size: .85rem; color: var(--tinta-suave); margin-top: 2px; }
 .fig.centro .rotulo b { font-size: 1.12rem; }
 .fig.autor .ovalo { box-shadow: 0 0 0 3px #fff, 0 0 0 5px var(--granate); }
-.boda { position: absolute; left: 0; width: 1200px; top: 538px; text-align: center; }
+.boda { position: absolute; left: 0; width: 1200px; top: 560px; text-align: center; }
 .boda .guion { font-size: 1.7rem; }
 .boda small { letter-spacing: .12em; }
 .arbol-movil { display: none; }
@@ -255,3 +255,5 @@ a.fig:hover { color: var(--granate); }
   .arbol-movil { display: block; }
   .nivel.n5 { grid-template-columns: 1fr; }
 }
+
+.fig.hijo .rotulo small { white-space: nowrap; }
