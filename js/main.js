@@ -77,3 +77,14 @@
     else img.addEventListener("error", sinFoto);
   });
 })();
+
+(function () {
+  var fig = document.querySelector(".lamina-web");
+  var marco = document.querySelector(".tablero-marco");
+  if (!fig || !marco) return;
+  var img = fig.querySelector("img");
+  function mostrar() { fig.hidden = false; marco.style.display = "none"; }
+  var test = new Image();
+  test.onload = mostrar;
+  test.src = img.getAttribute("src");
+})();
