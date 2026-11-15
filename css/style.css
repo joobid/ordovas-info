@@ -278,3 +278,10 @@ a.fig:hover { color: var(--granate); }
   .lamina-web .solo-ordenador { display: none; }
   .lamina-web .solo-movil { display: inline; }
 }
+
+/* Fila de fotos con la misma altura */
+.fila-fotos { display: flex; gap: 1.2rem; margin: 2rem 0; clear: both; align-items: flex-start; }
+.fila-fotos figure.foto { margin: 0; float: none; width: auto; flex: var(--r) 1 0; min-width: 0; }
+.fila-fotos figure.foto img { width: 100%; height: auto; display: block; }
+.fila-fotos figure.foto figcaption { font-size: .88rem; }
+@media (max-width: 760px) { .fila-fotos { flex-direction: column; } .fila-fotos figure.foto { flex: none; width: 100%; } }
