@@ -179,6 +179,11 @@ figure.foto.ancha { float: none; width: min(26rem, 100%); margin: 2rem auto; }
 .pares { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.6rem; margin: 2rem 0; clear: both; align-items: start; }
 .pares figure.foto { margin: 0; width: auto; float: none; }
 
+.trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; margin: 2rem 0; clear: both; align-items: start; }
+.trio figure.foto { margin: 0; width: auto; float: none; }
+.trio figure.foto figcaption { font-size: .88rem; }
+@media (max-width: 760px) { .trio { grid-template-columns: 1fr; } }
+
 .notas { max-width: var(--ancho); margin: 3rem auto 0; padding-top: 1.4rem; border-top: 1px solid var(--linea); font-size: .92rem; color: var(--tinta-suave); }
 .notas ol { padding-left: 1.3rem; margin: 0; }
 sup a { text-decoration: none; font-weight: 700; }
